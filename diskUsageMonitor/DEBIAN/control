@@ -1,0 +1,7 @@
+Package: DiskUsageMonitor
+Version: 1.0
+Architecture: amd64
+Maintainer: Piotr <viewer@as1.pl>
+Installed-Size: 1024
+Depends: libc6 (>= 2.28)
+Description: This is a sample package

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Camera4455
+Comment=Obraz z kamery na porcie 4455
+Exec=/opt/view-camera-4455/udp_broadcast_receiver %F
+Icon=/opt/view-camera-4455/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+StartupWMClass=MojaAplikacjaDoWyswietlaniaObrazuZKamery
+MimeType=image/png
