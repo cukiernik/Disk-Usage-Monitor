@@ -23,6 +23,9 @@ jobs:
     - name: Set version
       id: version
       run: T=$(date +%s) ; echo -e "TIME=$T\nRELEASE_TAG=v1.0.$T" >> $GITHUB_ENV
+    - name: Install dependencies
+      run: |
+          sudo apt install -y build-essential cmake pkg-config
     - name: diskUsageMonitor.deb
       run: make diskUsageMonitor.deb time=${{ env.TIME }}
     - name: Create GitHub Release
