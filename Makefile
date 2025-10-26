@@ -3,8 +3,9 @@ all:	qt/DiskUsageMonitor
 qt/DiskUsageMonitor:
 	cd qt && qmake DiskUsageMonitor.prj && make
 
-DiskUsageMonitor.deb:	qt/DiskUsageMonitor
+diskUsageMonitor.deb:	qt/DiskUsageMonitor
+	mkdir -p diskUsageMonitor/usr/bin diskUsageMonitor/opt/DiskUsageMonitor
 	cp $^ diskUsageMonitor/opt/DiskUsageMonitor/
-	#mv view-camera-4455/opt/view-camera-4455/serwer.a olej.napedowy/opt/olej.napedowy/olej.napedowy
+	sed -i 's/Version: .*/Version: 1.0.$(time)/' diskUsageMonitor/DEBIAN/control
 	fakeroot dpkg --build diskUsageMonitor
 
