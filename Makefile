@@ -1,7 +1,7 @@
 all:	qt/DiskUsageMonitor
 
 qt/DiskUsageMonitor:
-	cd qt && qmake DiskUsageMonitor.prj && make
+	cd qt && qmake DiskUsageMonitor.pro && make
 
 diskUsageMonitor.deb:	qt/DiskUsageMonitor
 	mkdir -p diskUsageMonitor/usr/bin diskUsageMonitor/opt/DiskUsageMonitor
